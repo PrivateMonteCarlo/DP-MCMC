@@ -5,8 +5,8 @@ layout: default
 ## People
 
 ### Sinan Yıldırım, Assistant Professor at Sabanci University
-![Branching](/assets/img/Sinan3.jpg)
+<img src="assets/img/Baris.jpg"  width="100" height="200"/>
 ### Barış Alparslan, MSc Student at Sabanci University
-![Branching](/assets/img/Baris.jpg)
+<img src="assets/img/Sinan3.jpg" width="100" height="200"/>
 
 [back](./)
