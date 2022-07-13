@@ -4,6 +4,11 @@ layout: default
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
+*   **Project title:** Data Privacy Applications with Monte Carlo Methods
+*   **Principle investigator:** Sinan Yıldırım
+*   **Project Type:** TUBITAK 3501
+*   **People:** Sinan Yıldırım, Barış Alparslan
+
 [Link to another page](./another-page.html).
 
 There should be whitespace between paragraphs.
