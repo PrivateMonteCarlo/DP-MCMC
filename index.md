@@ -29,7 +29,7 @@ This work mainly addresses two problems: (1) What statistic of the sample should
 
 #### Statistic selection based on Fisher Information
 
-<img src="assets/img/privacy_settings.jpg"  style="width:256px;height:256px;"/>
+<img src="assets/img/privacy_settings.png"  style="width:256px;height:256px;"/>
 
 | Model         | Type                                                                         | 
 |:--------------|:-----------------------------------------------------------------------------|
