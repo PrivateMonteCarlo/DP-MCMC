@@ -2,8 +2,6 @@
 layout: default
 ---
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
-
 *   **Principle investigator:** Sinan Yıldırım
 *   **Project Type:** TUBITAK 3501
 
@@ -18,7 +16,7 @@ Text can be **bold**, _italic_, or ~~strikethrough~~.
 
 > **Title:** Statistic Selection and MCMC for Differentially Private Bayesian Estimation
 >
-> **Arxiv link:** (https://arxiv.org/abs/2203.13377) 
+> **Arxiv link:** https://arxiv.org/abs/2203.13377
 >
 > Differentially private Bayesian estimation of the parameters of a population distribution when a noisy statistic of a sample from that population is shared.
 
@@ -31,7 +29,7 @@ This work mainly addresses two problems: (1) What statistic of the sample should
 
 #### Statistic selection based on Fisher Information
 
-<img src="assets/img/privacy_settings.png"  style="width:300px;height:250px;"/>
+<img src="assets/img/privacy_settings.png"  style="width:300px;height:220px;"/>
 
 | Model         | Type                                                                         | 
 |:--------------|:-----------------------------------------------------------------------------|
@@ -54,103 +52,3 @@ MCMC algorithms used in the project:
 | Additive statistic, Non-Gaussian noise (Laplace)                             |PMMH (Algorithm 5), MHAAR (Algorithm 6| 
 | Non-additive statistic, Non-Gaussian noise (Laplace)                         |MHAAR (Algorithm 7)|
 | No summary statistic instead sequential release, Non-Gaussian noise (Laplace)|MHAAR (Algorithm 8)| 
-
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
-
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
-
-#### Header 4
-
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-
-##### Header 5
-
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
-
-###### Header 6
-
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
-
-### There's a horizontal rule below this.
-
-* * *
-
-### Here is an unordered list:
-
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-
-### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Small image
-
-![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
-
-### Large image
-
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
-
-
-### Definition lists can be used with HTML syntax.
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
-
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
-
-```
-The final element.
-```

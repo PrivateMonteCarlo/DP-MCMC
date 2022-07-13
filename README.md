@@ -1,116 +1,128 @@
-# The Minimal theme
+# Statistic Selection and MCMC for Differentially Private Bayesian Estimation
 
-[![.github/workflows/ci.yaml](https://github.com/pages-themes/minimal/actions/workflows/ci.yaml/badge.svg)](https://github.com/pages-themes/minimal/actions/workflows/ci.yaml) [![Gem Version](https://badge.fury.io/rb/jekyll-theme-minimal.svg)](https://badge.fury.io/rb/jekyll-theme-minimal)
+# Original github page for the project:
+https://github.com/barisalparslan1/statistic_selection_and_mcmc
 
-*Minimal is a Jekyll theme for GitHub Pages. You can [preview the theme to see what it looks like](http://pages-themes.github.io/minimal), or even [use it today](#usage).*
+# Summary
+This code package replicates the results reported in the paper "Statistic Selection and MCMC for Differentially Private Bayesian Estimation". Abstract of the paper is given below:
 
-![Thumbnail of Minimal](thumbnail.png)
+This paper concerns differentially private Bayesian estimation of the parameters of a population distribution, when a statistic of a sample from that population is shared in noise to provide differential privacy. This work mainly addresses two problems: (1) What statistic of the sample should be shared privately? For the first question, i.e., the one about statistic selection, we promote using the Fisher information. We find out that, the statistic that is most informative in a non-privacy setting may not be the optimal choice under the privacy restrictions. We provide several examples to support that point. We consider several types of data sharing settings and propose several Monte Carlo-based numerical estimation methods for calculating the Fisher information for those settings. The second question concerns inference: (2) Based on the shared statistics, how could we perform effective Bayesian inference? We propose several Markov chain Monte Carlo (MCMC) algorithms for sampling from the posterior distribution of the parameter given the noisy statistic. The proposed MCMC algorithms can be preferred over one another depending on the problem. For example, when the shared statistics is additive and added Gaussian noise, a simple Metropolis-Hasting algorithm that utilizes the central limit theorem is a decent choice. We propose more advanced MCMC algorithms for several other cases of practical relevance. Our numerical examples involve comparing several candidate statistics to be shared privately. For each statistic, we perform Bayesian estimation based on the posterior distribution conditional on the privatized version of that statistic. We demonstrate that, the relative performance of a statistic, in terms of the mean squared error of the Bayesian estimator based on the corresponding privatized statistic, is adequately predicted by the Fisher information of the privatized statistic.
 
-## Usage
+For details and the results please check the manuscript.  
 
-To use the Minimal theme:
+Authors: Barış Alparslan and Sinan Yıldırım (Faculty of Engineering and Natural Sciences, Sabancı University, Istanbul, Turkey).
 
-1. Add the following to your site's `_config.yml`:
+# main files
 
-    ```yml
-    remote_theme: pages-themes/minimal@v0.2.0
-    plugins:
-    - jekyll-remote-theme # add this line to the plugins list if you already have one
-    ```
+#### main_CLT_norm_mean.m for the calculations in Example 1:
+FIM calculation for Example 1 in the manuscript. The MCMC algorithm is a MH algorithm.
 
-2. Optionally, if you'd like to preview your site on your computer, add the following to your site's `Gemfile`:
+- Use the first code block for plots in Example 1 in the manuscript.
 
-    ```ruby
-    gem "github-pages", group: :jekyll_plugins
-    ```
+#### main_CLT_norm_var for the experiments in Section 5.1:
+FIM and MSE calculation for Example 2 and Section 5.1 in the manuscript. The MCMC algorithm is a MH algorithm.
 
-## Customizing
+- Use the first code block for obtaining FIM values for Example 2.
+- Use the second code block for obtaining MSE values in Section 5.1.
+- Use the third code block for plotting FIM and MSE values together.
 
-### Configuration variables
+#### main_FIM_CLT_unif.m for the experiments in Example 3:
 
-Minimal will respect the following variables, if set in your site's `_config.yml`:
+- Use the first code block for obtaining FIM values for Example 3.
 
-```yml
-title: [The title of your site]
-description: [A short description of your site's purpose]
-```
+#### main_FIM_binary.m for the experiments in Example 4:
+This is the experiment regarding binary responses.
 
-Additionally, you may choose to set the following optional variables:
+- Use the first code block for obtaining FIM values for Example 4.
 
-```yml
-show_downloads: ["true" or "false" (unquoted) to indicate whether to provide a download URL]
-google_analytics: [Your Google Analytics tracking ID]
-```
+#### main_CLT_Lap_norm_var.m for the experiments in Section 5.2 and Section 5.3:
+FIM approximation, MSE calculation and IAC calculation for Section 5.2 and 5.3 in the manuscript. The MCMC algorithms are PMMH and MHAAR.
 
-### Stylesheet
+- Use the first code block for obtaining FIM values in Section 5.2
+- Use the second code block for obtaining MSE values in Section 5.2
+- Use the third code block for IAC values at the Section 5.3.
+- Use the code block at the bottom for plotting FIM and MSE together.
 
-If you'd like to add your own custom styles:
+#### main_non_additive_norm_var.m for the experiments in Section 5.4:
+FIM approximation, MSE and ACF calculation for Section 5.4 in the manuscript. The MCMC algorithm is MHAAR.
 
-1. Create a file called `/assets/css/style.scss` in your site
-2. Add the following content to the top of the file, exactly as shown:
-    ```scss
-    ---
-    ---
+- Use the first code block for obtaining FIM values in Section 5.4
+- Use the second code block for obtaining MSE values in Section 5.4
+- Use the third code block for ACF values at the Section 5.4 with median.
+- Use the code block at the bottom for plotting FIM and ACF together.
 
-    @import "{{ site.theme }}";
-    ```
-3. Add any custom CSS (or Sass, including imports) you'd like immediately after the `@import` line
+#### main_MHAAR_RB_DP.m for the experiments in Section 5.5:
+FIM approximation and MSE calculation for Section 5.5 in the manuscript. The MCMC algorithm is MHAAR-RB.
 
-*Note: If you'd like to change the theme's Sass variables, you must set new values before the `@import` line in your stylesheet.*
+- Use the first code block for obtaining MSE values in Section 5.5.
+- Use the second code block for obtaining FIM values in Section 5.5.
+- USe the third code block for plotting FIM and MSE together.
 
-### Layouts
+# functions 
+## functions for FIM calculation
+#### FIM_DP_norm_mean_CLT 
+###### Inputs: DP level, data size, moment of x, boundary of x, mean parameter
+###### output: Fisher information
 
-If you'd like to change the theme's HTML layout:
+This function calculates the FIM of the noisy summary statistic(additive) with respect to the mean parameter of the normal distribution with variance 1. Noise: Gaussian.
 
-1. For some changes such as a custom `favicon`, you can add custom files in your local `_includes` folder. The files [provided with the theme](https://github.com/pages-themes/minimal/tree/master/_includes) provide a starting point and are included by the [original layout template](https://github.com/pages-themes/minimal/blob/master/_layouts/default.html).
-2. For more extensive changes, [copy the original template](https://github.com/pages-themes/minimal/blob/master/_layouts/default.html) from the theme's repository<br />(*Pro-tip: click "raw" to make copying easier*)
-3. Create a file called `/_layouts/default.html` in your site
-4. Paste the default layout content copied in the first step
-5. Customize the layout as you'd like
+#### FIM_DP_norm_var_CLT 
+###### Inputs: DP level, data size, moment of x, boundary of x, variance parameter
+###### output: Fisher information
 
-### Customizing Google Analytics code
+This function calculates the FIM of the noisy summary statistic(additive) with respect to the variance parameter of the normal distribution with mean 0. Noise: Gaussian.
 
-Google has released several iterations to their Google Analytics code over the years since this theme was first created. If you would like to take advantage of the latest code, paste it into `_includes/head-custom-google-analytics.html` in your Jekyll site.
+#### FIM_DP_CLT_Lap_norm_var
+###### Inputs: true variance parameter, moment of x, data size, boundary of x, DP level, size of latent variable, number of MCMC runs
+###### output: Fisher information
 
-### Overriding GitHub-generated URLs
+This function calculates the FIM of the noisy summary statistic(additive) with respect to the variance parameter of the normal distribution with mean 0. Noise: Laplace.
 
-Templates often rely on URLs supplied by GitHub such as links to your repository or links to download your project. If you'd like to override one or more default URLs:
+#### FIM_DP_norm_var
+###### Inputs: true variance parameter, moment of x, data size, boundary of x, DP level, DP variable for smooth sensitivity, size of latent variable, number of MCMC runs, name of the statistic
+###### output: Fisher information
 
-1. Look at [the template source](https://github.com/pages-themes/minimal/blob/master/_layouts/default.html) to determine the name of the variable. It will be in the form of `{{ site.github.zip_url }}`.
-2. Specify the URL that you'd like the template to use in your site's `_config.yml`. For example, if the variable was `site.github.url`, you'd add the following:
-    ```yml
-    github:
-      zip_url: http://example.com/download.zip
-      another_url: another value
-    ```
-3. When your site is built, Jekyll will use the URL you specified, rather than the default one provided by GitHub.
+This function calculates the FIM of the noisy individual statistic(non-additive) with respect to the variance parameter of the normal distribution with mean 0. Noise: Laplace.
 
-*Note: You must remove the `site.` prefix, and each variable name (after the `github.`) should be indent with two space below `github:`.*
+#### FIM_DP_Lap_seq_release
+###### Inputs: true variance parameter, moment of x, data size, boundary of x, DP level, size of latent variable, number of MCMC runs
+###### output: Fisher information
 
-For more information, see [the Jekyll variables documentation](https://jekyllrb.com/docs/variables/).
+This function calculates the FIM of the noisy individual statistic(sequential release) with respect to the variance parameter of the normal distribution with mean 0. Noise: Laplace.
 
-## Roadmap
+## functions for Bayesian estimation and MSE calculation
+#### MH_DP_CLT_norm_var
+###### Inputs: shared statistic, initial theta, moment of x, data size, boundary of x, DP level, number of MCMC runs, variance for proposal distribution
+###### output: Estimations of the parameter
 
-See the [open issues](https://github.com/pages-themes/minimal/issues) for a list of proposed features (and known issues).
+This function calculates the MSE of the estimation for the variance parameter of the normal distribution when the summary statistic(additive) is shared with Gaussian noise. MCMC: Metropolis-Hastings.
 
-## Project philosophy
+#### PMMH_DP_CLT_Lap_norm_var
+###### Inputs: shared statistic, initial theta, moment of x, data size, boundary of x, DP level, number of MCMC runs, variance for proposal distribution, number of latent variables
+###### output: Estimations of the parameter
 
-The Minimal theme is intended to make it quick and easy for GitHub Pages users to create their first (or 100th) website. The theme should meet the vast majority of users' needs out of the box, erring on the side of simplicity rather than flexibility, and provide users the opportunity to opt-in to additional complexity if they have specific needs or wish to further customize their experience (such as adding custom CSS or modifying the default layout). It should also look great, but that goes without saying.
+This function calculates the MSE of the estimation for the variance parameter of the normal distribution when the summary statistic(additive) is shared with Laplace noise. MCMC: Pseudo-marginal Metropolis-Hastings.
 
-## Contributing
+#### MHAAR_DP_CLT_Lap_norm_var
+###### Inputs: shared statistic, initial theta, moment of x, data size, boundary of x, DP level, number of MCMC runs, variance for proposal distribution, number of latent variables
+###### output: Estimations of the parameter
 
-Interested in contributing to Minimal? We'd love your help. Minimal is an open source project, built one contribution at a time by users like you. See [the CONTRIBUTING file](docs/CONTRIBUTING.md) for instructions on how to contribute.
+This function calculates the MSE of the estimation for the variance parameter of the normal distribution when the summary statistic(additive) is shared with Laplace noise. MCMC: Metropolis-Hastings with Averaged Acceptance Ratio.
 
-### Previewing the theme locally
+#### DM_MHAAR_norm_var
+###### Inputs: shared statistic, moment of x, boundary of x, data size, number of MCMC runs, number of latent variables, DP level, DP variable for smooth sensitivity, initial theta,variance for proposal distribution, name of the statistic
+###### output: Estimations of the parameter
 
-If you'd like to preview the theme locally (for example, in the process of proposing a change):
+This function calculates the MSE of the estimation for the variance parameter of the normal distribution when the summary statistic(non-additive) is shared with Laplace noise. MCMC: Metropolis-Hastings with Averaged Acceptance Ratio.
 
-1. Clone down the theme's repository (`git clone https://github.com/pages-themes/minimal`)
-2. `cd` into the theme's directory
-3. Run `script/bootstrap` to install the necessary dependencies
-4. Run `bundle exec jekyll serve` to start the preview server
-5. Visit [`localhost:4000`](http://localhost:4000) in your browser to preview the theme
+#### MHAAR_RB_DP_norm_mean
+###### Inputs: shared statistic,initial theta, DP level, boundary of x, moment of x,  variance for proposal distribution, number of MCMC runs, number of latent variables
+###### output: Estimations of the parameter
 
-### Running tests
+This function calculates the MSE of the estimation for the variance parameter of the normal distribution when the statistic(sequential) is shared with Laplace noise. MCMC: Metropolis-Hastings with Averaged Acceptance Ratio.
 
-The theme contains a minimal test suite, to ensure a site with the theme would build successfully. To run the tests, simply run `script/cibuild`. You'll need to run `script/bootstrap` once before the test script will work.
+#### MHAAR_RB_DP_norm_var
+###### Inputs: shared statistic,initial theta, DP level, boundary of x, moment of x,  variance for proposal distribution, number of MCMC runs, number of latent variables
+###### output: Estimations of the parameter
+
+This function calculates the MSE of the estimation for the variance parameter of the normal distribution when the statistic(sequential) is shared with Laplace noise. MCMC: Metropolis-Hastings with Averaged Acceptance Ratio.
