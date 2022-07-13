@@ -1,6 +1,6 @@
-title: Statistic Selection and MCMC for Differentially Private Bayesian Estimation
+title: TÜBİTAK-120E534
 logo: /assets/img/Sabanci_University_logo.png
-description: This paper concerns differentially private Bayesian estimation of the parameters of a population distribution, when a statistic of a sample from that population is shared in noise to provide differential privacy.
-show_downloads: true
+description: Data Privacy Applications with Monte-Carlo Methods
+show_downloads: false
 google_analytics:
 theme: jekyll-theme-minimal
