@@ -4,8 +4,7 @@ layout: default
 
 *   **Principle investigator:** Sinan Yıldırım
 *   **Project Type:** TUBITAK 3501
-
-[See people working on the project](./another-page.html).
+*   **People:**  [See people working on the project](./another-page.html).
 
 ### Research output 
 
