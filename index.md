@@ -16,7 +16,8 @@ Text can be **bold**, _italic_, or ~~strikethrough~~.
 
 ## Summary of the work
 
-> **Title:** Statistic Selection and MCMC for Differentially Private Bayesian Estimation (https://arxiv.org/abs/2203.13377)
+> **Title:** Statistic Selection and MCMC for Differentially Private Bayesian Estimation
+> **Arxiv link:** (https://arxiv.org/abs/2203.13377) 
 >
 > Differentially private Bayesian estimation of the parameters of a population distribution when a noisy statistic of a sample from that population is shared.
 
@@ -29,7 +30,7 @@ This work mainly addresses two problems: (1) What statistic of the sample should
 
 #### Statistic selection based on Fisher Information
 
-<img src="assets/img/privacy_settings.png"  style="width:256px;height:256px;"/>
+<img src="assets/img/privacy_settings.png"  style="width:1024px;height:1024px;"/>
 
 | Model         | Type                                                                         | 
 |:--------------|:-----------------------------------------------------------------------------|
