@@ -6,9 +6,8 @@ Text can be **bold**, _italic_, or ~~strikethrough~~.
 
 *   **Principle investigator:** Sinan Yıldırım
 *   **Project Type:** TUBITAK 3501
-*   **People:** Sinan Yıldırım, Barış Alparslan
 
-[Link to another page](./another-page.html).
+[People](./another-page.html).
 
 # Header 1
 
