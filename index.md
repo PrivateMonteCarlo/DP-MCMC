@@ -8,18 +8,19 @@ layout: default
 
 ### Research output 
 
-*   **Submitted:** Statistic Selection and MCMC for Differentially Private Bayesian Estimation, B.Alparslan, S.Yıldırım, submitted to Statistics and Computing, 2022
-*   **Work in progress:** Differentially Private Linear Regression with Gibbs Sampling, B.Alparslan, S.Yıldırım, 2022
+*   **Published:** Alparslan B., Yıldırım S., Statistic Selection and MCMC for Differentially Private Bayesian Estimation, Statistics and Computing, 2022
+*   **Submitted:** Alparslan B., Yıldırım S., Birbil, S.I. , Differentially Private Distributed Bayesian Linear Regression with MCMC, submitted to Artificial Intelligence and Statistics 2023
 
 ## Summary of the work
 
 > **Title:** Statistic Selection and MCMC for Differentially Private Bayesian Estimation
 >
-> **Arxiv link:** https://arxiv.org/abs/2203.13377
+> **Publication link:** https://doi.org/10.1007/s11222-022-10129-8
+> **Arxiv link**: https://arxiv.org/abs/2203.13377
 >
 > Differentially private Bayesian estimation of the parameters of a population distribution when a noisy statistic of a sample from that population is shared.
 
-### Main contributions
+### Main contributions of the published paper
 
 * Statistic selection based on Fisher Information.
 * Sampling from the true posterior based on the noisy statistic (Bayesian Inference using MCMC).
