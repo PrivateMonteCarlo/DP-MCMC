@@ -11,7 +11,7 @@ layout: default
 *   **Published:** Alparslan B., Yıldırım S., Statistic Selection and MCMC for Differentially Private Bayesian Estimation, Statistics and Computing, 2022
 *   **Submitted:** Alparslan B., Yıldırım S., Birbil, S.I. , Differentially Private Distributed Bayesian Linear Regression with MCMC, submitted to Artificial Intelligence and Statistics 2023
 
-## Summary of the work
+## Summary of the published paper
 
 > **Title:** Statistic Selection and MCMC for Differentially Private Bayesian Estimation
 >
