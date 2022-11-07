@@ -16,6 +16,7 @@ layout: default
 > **Title:** Statistic Selection and MCMC for Differentially Private Bayesian Estimation
 >
 > **Publication link:** https://doi.org/10.1007/s11222-022-10129-8
+> 
 > **Arxiv link**: https://arxiv.org/abs/2203.13377
 >
 > Differentially private Bayesian estimation of the parameters of a population distribution when a noisy statistic of a sample from that population is shared.
