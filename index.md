@@ -74,7 +74,7 @@ We propose a novel online and adaptive truncation method for differentially priv
 2. For $t = 1, 2, \ldots$
   - 1. The function $s_{t}$ is revealed to individual $t$, which shares his/her data $X_{t}$ as  
  
-  \\[ Y_{t} = s_{t}(X_{t}) + \Delta s_{t} V_{t}, \quad V_{t} \sim \textup{Laplace}\left( 1/ \epsilon \right) \\]
+  \\[ Y_{t} = s_{t}(X_{t}) + \Delta s_{t} V_{t}, \quad V_{t} \sim \text{Laplace}\left( 1/ \epsilon \right) \\]
 
   - 2. **(3)** Update the estimation system $\Theta_{t}$ as \\[ \Theta_{t} = G(\Theta_{t-1}, Y_{1:t}, s_{1:t}) \\]
 
