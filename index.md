@@ -68,27 +68,15 @@ MCMC algorithms used in the project:
 
 We propose a novel online and adaptive truncation method for differentially private Bayesian online estimation of a static parameter regarding a population. We assume that sensitive information from individuals is collected sequentially and the inferential aim is to estimate, on-the-fly, a static parameter regarding the population to which those individuals belong. We propose sequential Monte Carlo to perform online Bayesian estimation. When individuals provide sensitive information in response to a query, it is necessary to perturb it with privacy-preserving noise to ensure the privacy of those individuals. The amount of perturbation is proportional to the sensitivity of the query, which is determined usually by the range of the queried information. The truncation technique we propose adapts to the previously collected observations to adjust the query range for the next individual. The idea is that, based on previous observations, we can carefully arrange the interval into which the next individual's information is to be truncated before being perturbed with privacy-preserving noise. In this way, we aim to design predictive queries with small sensitivity, hence small privacy-preserving noise, enabling more accurate estimation while maintaining the same level of privacy. To decide on the location and the width of the interval, we use an exploration-exploitation approach a la Thompson sampling with an objective function based on the Fisher information of the generated observation. We show the merits of our methodology with numerical examples.
 
-#### Differentially private online learning - general scheme
-$$
-\begin{algorithm}
-\caption{Differentially private online learning - general scheme}
-\label{alg: Differentially private online learning}
-Initialise the estimation system $\Theta_{0}$ and $s_{1}(\cdot)$.\\
+#### Differentially private online learning - general scheme (pseudocode)
+1. Initialise the estimation system $\Theta_{0}$ and $s_{1}(\cdot)$.\\
 
-\For{$t = 1, 2, \ldots$}{
-The function $s_{t}$ is revealed to individual $t$, which shares his/her data $X_{t}$ as
+2. For{$t = 1, 2, \ldots$}
+  2.1.The function $s_{t}$ is revealed to individual $t$, which shares his/her data $X_{t}$ as  $$Y_{t} = s_{t}(X_{t}) + \Delta s_{t} V_{t}, \quad V_{t} \sim \textup{Laplace}\left( 1/ \epsilon \right)$$
 
-$$Y_{t} = s_{t}(X_{t}) + \Delta s_{t} V_{t}, \quad V_{t} \sim \textup{Laplace}\left( 1/ \epsilon \right)$$
+  2.2 Update the estimation system $\Theta_{t}$ as $$\Theta_{t} = G(\Theta_{t-1}, Y_{1:t}, s_{1:t}) $$ **(3)**
 
-Update the estimation system $\Theta_{t}$ as
-
-$$\Theta_{t} = G(\Theta_{t-1}, Y_{1:t}, s_{1:t}) $$
-
-Update the new function
-$$s_{t+1} = H(\Theta_{t}) $$
-}
-\end{algorithm}
-$$
+  2.3.Update the new function $$s_{t+1} = H(\Theta_{t}) $$                                             **(4)**
 **Sequential Monte Carlo method for (3)
 **Adaptive truncation for (4)
 
