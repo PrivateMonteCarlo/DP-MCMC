@@ -1,5 +1,7 @@
 ---
 layout: default
+header-includes:
+  - \usepackage[ruled,vlined,linesnumbered]{algorithm2e}
 ---
 
 *   **Principle investigator:** Sinan Yıldırım, Sabanci University
@@ -10,18 +12,19 @@ layout: default
 
 ### Research output 
 
-*   **Published:** Alparslan B., Yıldırım S., Statistic Selection and MCMC for Differentially Private Bayesian Estimation, Statistics and Computing, 2022
-*   **Submitted:** Alparslan B., Yıldırım S., Birbil, S.I. , Differentially Private Distributed Bayesian Linear Regression with MCMC, submitted to Artificial Intelligence and Statistics 2023
+*   **(1) Published:** Alparslan B., Yıldırım S., Statistic Selection and MCMC for Differentially Private Bayesian Estimation, Statistics and Computing, 2022
+*   **(2) Submitted:** Yıldırım S. Differentially Private Online Bayesian Estimation with Adaptive Truncation, submitted to Turkish Journal of Electrical and Computer Sciences, 2023
+*   **(3) Submitted:** Alparslan B., Yıldırım S., Birbil, S.I. , Differentially Private Distributed Bayesian Linear Regression with MCMC, submitted to International Conference on Machine Learning (ICML) 2023
 
-## Summary of the published paper
+## Summary of (1)
 
 > **Title:** Statistic Selection and MCMC for Differentially Private Bayesian Estimation
 >
 > **Publication link:** https://doi.org/10.1007/s11222-022-10129-8
 > 
-> **Arxiv link**: https://arxiv.org/abs/2203.13377
+> **Pre-print**: https://arxiv.org/abs/2203.13377
 >
-> Differentially private Bayesian estimation of the parameters of a population distribution when a noisy statistic of a sample from that population is shared.
+> Keywords: Differential privacy, Markov chain Monte Carlo, Fisher information, statistic selection; Bayesian statistics.
 
 ### Main contributions of the published paper
 
@@ -55,3 +58,41 @@ MCMC algorithms used in the project:
 | Additive statistic, Non-Gaussian noise (Laplace)                             |PMMH (Algorithm 5), MHAAR (Algorithm 6| 
 | Non-additive statistic, Non-Gaussian noise (Laplace)                         |MHAAR (Algorithm 7)|
 | No summary statistic instead sequential release, Non-Gaussian noise (Laplace)|MHAAR (Algorithm 8)| 
+
+## Summary of (2)
+> **Title:** Differentially Private Online Bayesian Estimation with Adaptive Truncation
+> 
+> **Pre-print**: https://arxiv.org/abs/2203.13377
+>
+> Keywords: Differential privacy, Bayesian statistics, Sequential Monte Carlo, online learning
+
+We propose a novel online and adaptive truncation method for differentially private Bayesian online estimation of a static parameter regarding a population. We assume that sensitive information from individuals is collected sequentially and the inferential aim is to estimate, on-the-fly, a static parameter regarding the population to which those individuals belong. We propose sequential Monte Carlo to perform online Bayesian estimation. When individuals provide sensitive information in response to a query, it is necessary to perturb it with privacy-preserving noise to ensure the privacy of those individuals. The amount of perturbation is proportional to the sensitivity of the query, which is determined usually by the range of the queried information. The truncation technique we propose adapts to the previously collected observations to adjust the query range for the next individual. The idea is that, based on previous observations, we can carefully arrange the interval into which the next individual's information is to be truncated before being perturbed with privacy-preserving noise. In this way, we aim to design predictive queries with small sensitivity, hence small privacy-preserving noise, enabling more accurate estimation while maintaining the same level of privacy. To decide on the location and the width of the interval, we use an exploration-exploitation approach a la Thompson sampling with an objective function based on the Fisher information of the generated observation. We show the merits of our methodology with numerical examples.
+
+#### Differentially private online learning - general scheme
+\begin{algorithm}
+\caption{Differentially private online learning - general scheme}
+\label{alg: Differentially private online learning}
+Initialise the estimation system $\Theta_{0}$ and $s_{1}(\cdot)$.\\
+
+\For{$t = 1, 2, \ldots$}{
+The function $s_{t}$ is revealed to individual $t$, which shares his/her data $X_{t}$ as
+\[
+Y_{t} = s_{t}(X_{t}) + \Delta s_{t} V_{t}, \quad V_{t} \sim \textup{Laplace}\left( 1/ \epsilon \right)
+\]
+
+Update the estimation system $\Theta_{t}$ as
+\begin{equation} \label{eq: update theta general}
+\Theta_{t} = G(\Theta_{t-1}, Y_{1:t}, s_{1:t}) 
+\end{equation}
+
+Update the new function
+\begin{equation} \label{eq: update s general}
+s_{t+1} = H(\Theta_{t}) 
+\end{equation}
+}
+\end{algorithm}
+
+**Sequential Monte Carlo method for (3)
+**Adaptive truncation for (4)
+
+## Summary of (3)
