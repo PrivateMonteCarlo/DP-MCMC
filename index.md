@@ -118,6 +118,7 @@ z_{\text{noise},j} = z + \sigma_{z}v_{j}, \quad v_{j} \sim \mathcal{N}(0,I_{d})
 
 #### Differentially private distributed linear regression model 
 
+<img src="assets/img/Linear_regression.drawio.pdf"  style="width:300px;height:220px;"/>
 
 #### Algorithm-model matching
 
