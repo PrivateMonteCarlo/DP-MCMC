@@ -1,4 +1,5 @@
 ---
+layout: default
 header-includes:
   - \usepackage[ruled,vlined,linesnumbered]{algorithm2e}
 ---
@@ -75,19 +76,15 @@ Initialise the estimation system $\Theta_{0}$ and $s_{1}(\cdot)$.\\
 
 \For{$t = 1, 2, \ldots$}{
 The function $s_{t}$ is revealed to individual $t$, which shares his/her data $X_{t}$ as
-\[
-Y_{t} = s_{t}(X_{t}) + \Delta s_{t} V_{t}, \quad V_{t} \sim \textup{Laplace}\left( 1/ \epsilon \right)
-\]
+
+$$Y_{t} = s_{t}(X_{t}) + \Delta s_{t} V_{t}, \quad V_{t} \sim \textup{Laplace}\left( 1/ \epsilon \right)$$
 
 Update the estimation system $\Theta_{t}$ as
-\begin{equation} \label{eq: update theta general}
-\Theta_{t} = G(\Theta_{t-1}, Y_{1:t}, s_{1:t}) 
-\end{equation}
+
+$$\Theta_{t} = G(\Theta_{t-1}, Y_{1:t}, s_{1:t}) $$
 
 Update the new function
-\begin{equation} \label{eq: update s general}
-s_{t+1} = H(\Theta_{t}) 
-\end{equation}
+$$s_{t+1} = H(\Theta_{t}) $$
 }
 \end{algorithm}
 
