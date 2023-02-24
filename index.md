@@ -80,6 +80,6 @@ We propose a novel online and adaptive truncation method for differentially priv
   -                                           
 **Sequential Monte Carlo algorithm for step **(3)**
 
-**Adaptive truncation for **(4)**
+**Adaptive truncation based on Fisher information for **(4)**
 
 ## Summary of (3)
