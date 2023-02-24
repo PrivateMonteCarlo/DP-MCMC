@@ -87,4 +87,31 @@ We propose a novel online and adaptive truncation method for differentially priv
 >
 > Keywords: Differential privacy, linear regression, distributed learning, MCMC
 
-We propose a novel Bayesian inference framework for distributed differentially private linear regression. We consider a distributed setting where multiple parties hold parts of the data and share certain summary statistics of their portions in privacy-preserving noise. We develop a novel generative statistical model for privately shared statistics, which exploits a useful distributional relation between the summary statistics of linear regression. Bayesian estimation of the regression coefficients is conducted mainly using Markov chain Monte Carlo algorithms, while we also provide a fast version to perform Bayesian estimation in one iteration. The proposed methods have computational advantages over their competitors
+We propose a novel Bayesian inference framework for distributed differentially private linear regression. We consider a distributed setting where multiple parties hold parts of the data and share certain summary statistics of their portions in privacy-preserving noise. We develop a novel generative statistical model for privately shared statistics, which exploits a useful distributional relation between the summary statistics of linear regression. Bayesian estimation of the regression coefficients is conducted mainly using Markov chain Monte Carlo algorithms, while we also provide a fast version to perform Bayesian estimation in one iteration. The proposed methods have computational advantages over their competitors which are state-of-art algorithms adopted for the distributed case.
+
+#### Basic model and setup
+
+#### Distributed setting 
+Model:
+\\[
+y_{i} = x_{i}^{T}\theta + e_{i}, \quad e_{i} \overset{\text{i.i.d.}}{\sim} \mathcal{N}(0, \sigma_{y}^{2}), \quad i = 1, \ldots, n,
+ \\]
+
+Summary statistics are shared with noise as
+\\[
+S := X^{T}X, \quad z := X^{T}y, %  = S\theta + X^{T} e.
+\\]
+\\[
+\hat{S} &= S + \sigma_{s}M, \\]
+\\[
+\hat{z} &= z + \sigma_{z} v, \quad v \sim \mathcal{N}(0,I_{d}), \\]
+ 
+#### Differentially private distributed linear regression model 
+
+
+#### Algorithm-model matching
+| Model         | Type                                                                         | 
+|:----------------------------------|:-----------------------------------------------------------------------------|
+| Normally distributed features| MCMC-NormalX                                           | 
+| Features with general distribution| MCMC-fixedS, Bayes-fixedS-fast                            | 
+| Extended state-of-art algorithms| MCMS-B&S, adaSSP                        |
