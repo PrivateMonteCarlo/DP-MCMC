@@ -1,7 +1,5 @@
 ---
 layout: default
-header-includes:
-  - \usepackage[ruled,vlined,linesnumbered]{algorithm2e}
 ---
 
 *   **Principle investigator:** Sinan Yıldırım, Sabanci University
@@ -120,6 +118,7 @@ where $M$ is a d × d symmetric matrix with its upper triangular elements drawn 
 
 
 #### Algorithm-model matching
+
 | Model                             | Algorithm                     | 
 |:----------------------------------|:------------------------------|
 | Normally distributed features     | MCMC-NormalX                  | 
