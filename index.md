@@ -72,11 +72,11 @@ We propose a novel online and adaptive truncation method for differentially priv
 1. Initialise the estimation system $\Theta_{0}$ and $s_{1}(\cdot)$.\\
 
 2. For{$t = 1, 2, \ldots$}
-  1. The function $s_{t}$ is revealed to individual $t$, which shares his/her data $X_{t}$ as  $$Y_{t} = s_{t}(X_{t}) + \Delta s_{t} V_{t}, \quad V_{t} \sim \textup{Laplace}\left( 1/ \epsilon \right)$$
+  - 1. The function $s_{t}$ is revealed to individual $t$, which shares his/her data $X_{t}$ as  $$Y_{t} = s_{t}(X_{t}) + \Delta s_{t} V_{t}, \quad V_{t} \sim \textup{Laplace}\left( 1/ \epsilon \right)$$
 
-  2. Update the estimation system $\Theta_{t}$ as $$\Theta_{t} = G(\Theta_{t-1}, Y_{1:t}, s_{1:t}) $$ **(3)**
+  - 2. **(3)** Update the estimation system $\Theta_{t}$ as $$\Theta_{t} = G(\Theta_{t-1}, Y_{1:t}, s_{1:t}) $$ 
 
-  3. Update the new function $$s_{t+1} = H(\Theta_{t}) $$                                             **(4)**
+  - 3. **(4)** Update the new function $$s_{t+1} = H(\Theta_{t}) $$                                             
 **Sequential Monte Carlo method for (3)
 **Adaptive truncation for (4)
 
