@@ -102,9 +102,9 @@ Summary statistics are shared with noise as
 S := X^{T}X, \quad z := X^{T}y, %  = S\theta + X^{T} e.
 \\]
 \\[
-\hat{S} &= S + \sigma_{s}M, \\]
+\hat{S} = S + \sigma_{s}M, \\]
 \\[
-\hat{z} &= z + \sigma_{z} v, \quad v \sim \mathcal{N}(0,I_{d}), \\]
+\hat{z} = z + \sigma_{z} v, \quad v \sim \mathcal{N}(0,I_{d}), \\]
  
 #### Differentially private distributed linear regression model 
 
