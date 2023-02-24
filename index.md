@@ -78,8 +78,8 @@ We propose a novel online and adaptive truncation method for differentially priv
 
   - 3. **(4)** Update the new function $$s_{t+1} = H(\Theta_{t}) $$   
   -                                           
-**Sequential Monte Carlo algorithm for step (3)
+**Sequential Monte Carlo algorithm for step **(3)**
 
-**Adaptive truncation for (4)
+**Adaptive truncation for **(4)**
 
 ## Summary of (3)
