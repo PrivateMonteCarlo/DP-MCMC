@@ -104,7 +104,7 @@ Sharing summary statistics with noise:
 \hat{z} = z + \sigma_{z} v, \quad v \sim \mathcal{N}(0,I_{d}). \\]
 
 #### Distributed setting 
-
+$X_{j}^{T}X_{j}$, $z_{j} = X_{j}^{T}y_{j}$
 \\[
 \hat{S}_{j} = S_{j} + \sigma_{s}M_{j} 
 \\]
