@@ -109,14 +109,12 @@ Sharing summary statistics with noise:
 $X_{j}^{T}X_{j}$, $z_{j} = X_{j}^{T}y_{j}$ with privacy-preserving noise 
 
 \\[
-\hat{S}_{j} = S_{j} + \sigma_{s}M_{j}, 
-\\]
+\hat{S}_{j} = S_{j} + \sigma_{s}M_{j}, \\]
 
 where $M$ is a d × d symmetric matrix with its upper triangular elements drawn from $\mathcal{N}(0, 1)$.
 
 \\[
-\hat{z}_{j} &= z + \sigma_{z} v_{j}, \quad v_{j} \sim \mathcal{N}(\bm{0},I_{d})
-\\]
+\hat{z}_{j} = z + \sigma_{z} v_{j}, \quad v_{j} \sim \mathcal{N}(\bm{0},I_{d}) \\]
 
 #### Differentially private distributed linear regression model 
 
