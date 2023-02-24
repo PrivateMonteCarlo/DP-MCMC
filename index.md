@@ -24,7 +24,7 @@ header-includes:
 > 
 > **Pre-print**: https://arxiv.org/abs/2203.13377
 >
-> Keywords: Differential privacy, Markov chain Monte Carlo, Fisher information, statistic selection; Bayesian statistics.
+> Keywords: Differential privacy, Markov chain Monte Carlo, Fisher information, statistic selection, Bayesian statistics
 
 ### Main contributions of the published paper
 
@@ -78,8 +78,15 @@ We propose a novel online and adaptive truncation method for differentially priv
 
   - 3. **(4)** Update the new function $$s_{t+1} = H(\Theta_{t}) $$   
   -                                           
-**Sequential Monte Carlo algorithm for step **(3)**
+**Use Sequential Monte Carlo algorithm for step **(3)**
 
-**Adaptive truncation based on Fisher information for **(4)**
+**Use adaptive truncation based on Fisher information for **(4)**
 
 ## Summary of (3)
+> **Title:** Differentially Private Distributed Bayesian Linear Regression with MCMC
+> 
+> **Pre-print**: https://arxiv.org/abs/2203.13377
+>
+> Keywords: Differential privacy, linear regression, distributed learning, MCMC
+
+We propose a novel Bayesian inference framework for distributed differentially private linear regression. We consider a distributed setting where multiple parties hold parts of the data and share certain summary statistics of their portions in privacy-preserving noise. We develop a novel generative statistical model for privately shared statistics, which exploits a useful distributional relation between the summary statistics of linear regression. Bayesian estimation of the regression coefficients is conducted mainly using Markov chain Monte Carlo algorithms, while we also provide a fast version to perform Bayesian estimation in one iteration. The proposed methods have computational advantages over their competitors. 
