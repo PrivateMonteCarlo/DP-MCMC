@@ -3,4 +3,5 @@ logo: /assets/img/Sabanci_University_logo.png
 description: Data Privacy Applications with Monte-Carlo Methods
 show_downloads: false
 google_analytics:
+mathjax: true
 theme: jekyll-theme-minimal
