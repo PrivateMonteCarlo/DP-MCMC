@@ -62,7 +62,7 @@ MCMC algorithms used in the project:
 ## Summary of (2)
 > **Title:** Differentially Private Online Bayesian Estimation with Adaptive Truncation
 > 
-> **Pre-print**: https://arxiv.org/abs/2203.13377
+> **Pre-print**: https://arxiv.org/abs/2301.08202
 >
 > Keywords: Differential privacy, Bayesian statistics, Sequential Monte Carlo, online learning
 
@@ -85,7 +85,7 @@ We propose a novel online and adaptive truncation method for differentially priv
 ## Summary of (3)
 > **Title:** Differentially Private Distributed Bayesian Linear Regression with MCMC
 > 
-> **Pre-print**: https://arxiv.org/abs/2203.13377
+> **Pre-print**: https://arxiv.org/abs/2301.13778
 >
 > Keywords: Differential privacy, linear regression, distributed learning, MCMC
 
