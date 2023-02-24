@@ -80,9 +80,9 @@ We propose a novel online and adaptive truncation method for differentially priv
 
   - 3. (4) Update the new function \\[ s_{t+1} = H(\Theta_{t}) \\]   
                                              
-**The method employs Sequential Monte Carlo algorithm for step **(3)**
+**The method employs Sequential Monte Carlo algorithm for step (3)**
 
-**The method utilizes adaptive truncation based on exploration-exploitation and Thomson sampling using Fisher information for **(4)**
+**The method utilizes adaptive truncation based on exploration-exploitation and Thomson sampling using Fisher information for step (4)**
 
 ## Summary of (3)
 > **Title:** Differentially Private Distributed Bayesian Linear Regression with MCMC
