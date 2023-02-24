@@ -122,8 +122,9 @@ where $M$ is a d × d symmetric matrix with its upper triangular elements drawn 
 
 #### Algorithm-model matching
 
-| Model                             | Algorithm                     | 
-|:----------------------------------|:------------------------------|
-| Normally distributed features     | MCMC-NormalX                  | 
-| Features with general distribution| MCMC-fixedS, Bayes-fixedS-fast| 
-| Extended state-of-art algorithms  | MCMS-B&S, adaSSP              |
+| Model                             | Algorithm                                      | 
+|:----------------------------------|:-----------------------------------------------|
+| Normally distributed features     | MCMC-NormalX                                   | 
+| Features with general distribution| MCMC-fixedS, Bayes-fixedS-fast,adaSSP, MCMC-B&S|
+| Extended state-of-art algorithms  | MCMC-B&S, adaSSP                               |
+| Fast (one-iteration) algorithms   | Bayes-fixedS-fast,adaSSP                       |
