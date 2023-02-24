@@ -90,8 +90,6 @@ We propose a novel online and adaptive truncation method for differentially priv
 We propose a novel Bayesian inference framework for distributed differentially private linear regression. We consider a distributed setting where multiple parties hold parts of the data and share certain summary statistics of their portions in privacy-preserving noise. We develop a novel generative statistical model for privately shared statistics, which exploits a useful distributional relation between the summary statistics of linear regression. Bayesian estimation of the regression coefficients is conducted mainly using Markov chain Monte Carlo algorithms, while we also provide a fast version to perform Bayesian estimation in one iteration. The proposed methods have computational advantages over their competitors which are state-of-art algorithms adopted for the distributed case.
 
 #### Basic model and setup
-
-#### Distributed setting 
 Model:
 \\[
 y_{i} = x_{i}^{T}\theta + e_{i}, \quad e_{i} \overset{\text{i.i.d.}}{\sim} \mathcal{N}(0, \sigma_{y}^{2}), \quad i = 1, \ldots, n,
@@ -105,7 +103,17 @@ S := X^{T}X, \quad z := X^{T}y, %  = S\theta + X^{T} e.
 \hat{S} = S + \sigma_{s}M, \\]
 \\[
 \hat{z} = z + \sigma_{z} v, \quad v \sim \mathcal{N}(0,I_{d}), \\]
- 
+#### Distributed setting 
+
+ $X_{j}^{T}X_{j}$, $z_{j} = X_{j}^{T}y_{j}$ with privacy-preserving noise 
+
+\\[
+\hat{S}_{j} &= S_{j} + \sigma_{s}M_{j}, \\]
+
+\\[
+\hat{z}_{j} &= z + \sigma_{z} v_{j}, \quad v_{j} \sim \mathcal{N}(\bm{0},I_{d})
+\\]
+
 #### Differentially private distributed linear regression model 
 
 
