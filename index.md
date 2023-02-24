@@ -95,10 +95,11 @@ Model:
 y_{i} = x_{i}^{T}\theta + e_{i}, \quad e_{i} \overset{\text{i.i.d.}}{\sim} \mathcal{N}(0, \sigma_{y}^{2}), \quad i = 1, \ldots, n,
  \\]
 
-Summary statistics are shared with noise as
+Summary statistics:
 \\[
 S := X^{T}X, \quad z := X^{T}y, %  = S\theta + X^{T} e.
 \\]
+Sharing summary statistics with noise:
 \\[
 \hat{S} = S + \sigma_{s}M, \\]
 \\[
@@ -109,6 +110,8 @@ S := X^{T}X, \quad z := X^{T}y, %  = S\theta + X^{T} e.
 
 \\[
 \hat{S}_{j} &= S_{j} + \sigma_{s}M_{j}, \\]
+
+where $M$ is a d × d symmetric matrix with its upper triangular elements drawn from $\mathcal{N}(0, 1)$.
 
 \\[
 \hat{z}_{j} &= z + \sigma_{z} v_{j}, \quad v_{j} \sim \mathcal{N}(\bm{0},I_{d})
