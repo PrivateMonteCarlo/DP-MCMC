@@ -76,8 +76,10 @@ We propose a novel online and adaptive truncation method for differentially priv
 
   - 2. **(3)** Update the estimation system $\Theta_{t}$ as $$\Theta_{t} = G(\Theta_{t-1}, Y_{1:t}, s_{1:t}) $$ 
 
-  - 3. **(4)** Update the new function $$s_{t+1} = H(\Theta_{t}) $$                                             
-**Sequential Monte Carlo method for (3)
+  - 3. **(4)** Update the new function $$s_{t+1} = H(\Theta_{t}) $$   
+  -                                           
+**Sequential Monte Carlo algorithm for step (3)
+
 **Adaptive truncation for (4)
 
 ## Summary of (3)
