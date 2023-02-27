@@ -86,6 +86,7 @@ We propose a novel online and adaptive truncation method for differentially priv
 >
 > Keywords: Differential privacy, linear regression, distributed learning, MCMC
 
+### Main contributions
 We propose a novel Bayesian inference framework for distributed differentially private linear regression. We consider a distributed setting where multiple parties hold parts of the data and share certain summary statistics of their portions in privacy-preserving noise. We develop a novel generative statistical model for privately shared statistics, which exploits a useful distributional relation between the summary statistics of linear regression. Bayesian estimation of the regression coefficients is conducted mainly using Markov chain Monte Carlo algorithms, while we also provide a fast version to perform Bayesian estimation in one iteration. The proposed methods have computational advantages over their competitors which are state-of-art algorithms adopted for the distributed case.
 
 #### Basic model and setup
