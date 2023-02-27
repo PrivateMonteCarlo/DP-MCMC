@@ -57,7 +57,7 @@ MCMC algorithms used in the project:
 | Non-additive statistic, Non-Gaussian noise (Laplace)                         |MHAAR (Algorithm 7)|
 | No summary statistic instead sequential release, Non-Gaussian noise (Laplace)|MHAAR (Algorithm 8)| 
 
-## Summary of Differentially Private Online Bayesian Estimation with Adaptive Truncation> 
+## Summary of Differentially Private Online Bayesian Estimation with Adaptive Truncation
 > **Pre-print**: https://arxiv.org/abs/2301.08202
 >
 > **Code**: https://github.com/sinanyildirim/SMC_DP_adaTr
