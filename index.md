@@ -120,9 +120,9 @@ z_{\text{noise},j} = z + \sigma_{z}v_{j}, \quad v_{j} \sim \mathcal{N}(0,I_{d})
 
 #### Algorithm-model matching
 
-| Model                             | Algorithm                                      | 
-|:----------------------------------|:-----------------------------------------------|
-| Normally distributed features     | MCMC-NormalX                                   | 
-| Features with general distribution| MCMC-fixedS, Bayes-fixedS-fast,adaSSP, MCMC-B&S|
-| Extended state-of-art algorithms  | MCMC-B&S, adaSSP                               |
-| Fast (one-iteration) algorithms   | Bayes-fixedS-fast,adaSSP                       |
+| Model                             | Algorithm                                       | 
+|:----------------------------------|:------------------------------------------------|
+| Normally distributed features     | MCMC-NormalX                                    | 
+| Features with general distribution| MCMC-fixedS, Bayes-fixedS-fast, adaSSP, MCMC-B&S|
+| Extended state-of-art algorithms  | MCMC-B&S, adaSSP                                |
+| Fast (one-iteration) algorithms   | Bayes-fixedS-fast,adaSSP                        |
