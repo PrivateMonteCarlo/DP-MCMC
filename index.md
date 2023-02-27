@@ -3,8 +3,8 @@ layout: default
 ---
 
 *   **Principle investigator:** Sinan Yıldırım, Sabanci University
-*   **Graduate researcher:** Baris Alparslan, Sabanci University
-*   **Collaborator:** Ilker Birbil, University of Amsterdam
+*   **Graduate researcher:** Barış Alparslan, Sabanci University
+*   **Collaborator:** İlker Birbil, University of Amsterdam
 *   **Project Type:** TUBITAK 3501
 *   **People:**  [See people working on the project](./another-page.html).
 
