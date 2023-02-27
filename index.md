@@ -4,7 +4,7 @@ layout: default
 
 *   **Principle investigator:** Sinan Yıldırım, Sabanci University
 *   **Graduate researcher:** Baris Alparslan, Sabanci University
-*   **Contributor:** Ilker Birbil, University of Amsterdam
+*   **Collaborator:** Ilker Birbil, University of Amsterdam
 *   **Project Type:** TUBITAK 3501
 *   **People:**  [See people working on the project](./another-page.html).
 
@@ -14,17 +14,17 @@ layout: default
 *   **(2) Submitted:** Yıldırım S. Differentially Private Online Bayesian Estimation with Adaptive Truncation, submitted to Turkish Journal of Electrical and Computer Sciences, 2023
 *   **(3) Submitted:** Alparslan B., Yıldırım S., Birbil, S.I. , Differentially Private Distributed Bayesian Linear Regression with MCMC, submitted to International Conference on Machine Learning (ICML) 2023
 
-## Summary of (1)
-
-> **Title:** Statistic Selection and MCMC for Differentially Private Bayesian Estimation
+## Summary of Statistic Selection and MCMC for Differentially Private Bayesian Estimation
 >
 > **Publication link:** https://doi.org/10.1007/s11222-022-10129-8
 > 
 > **Pre-print**: https://arxiv.org/abs/2203.13377
 >
+> **Code** : https://github.com/barisalparslan1/statistic_selection_and_mcmc
+>
 > Keywords: Differential privacy, Markov chain Monte Carlo, Fisher information, statistic selection, Bayesian statistics
 
-### Main contributions of the published paper
+### Main contributions
 
 * Statistic selection based on Fisher Information.
 * Sampling from the true posterior based on the noisy statistic (Bayesian Inference using MCMC).
@@ -57,13 +57,14 @@ MCMC algorithms used in the project:
 | Non-additive statistic, Non-Gaussian noise (Laplace)                         |MHAAR (Algorithm 7)|
 | No summary statistic instead sequential release, Non-Gaussian noise (Laplace)|MHAAR (Algorithm 8)| 
 
-## Summary of (2)
-> **Title:** Differentially Private Online Bayesian Estimation with Adaptive Truncation
-> 
+## Summary of Differentially Private Online Bayesian Estimation with Adaptive Truncation> 
 > **Pre-print**: https://arxiv.org/abs/2301.08202
+>
+> **Code**: https://github.com/sinanyildirim/SMC_DP_adaTr
 >
 > Keywords: Differential privacy, Bayesian statistics, Sequential Monte Carlo, online learning
 
+### Main contributions
 We propose a novel online and adaptive truncation method for differentially private Bayesian online estimation of a static parameter regarding a population. We assume that sensitive information from individuals is collected sequentially and the inferential aim is to estimate, on-the-fly, a static parameter regarding the population to which those individuals belong. We propose sequential Monte Carlo to perform online Bayesian estimation. The idea is that, based on previous observations, we can carefully arrange the interval into which the next individual's information is to be truncated before being perturbed with privacy-preserving noise. In this way, we aim to design predictive queries with small sensitivity, hence small privacy-preserving noise, enabling more accurate estimation while maintaining the same level of privacy.
 
 #### Differentially private online learning - general scheme (pseudocode)
@@ -78,10 +79,10 @@ We propose a novel online and adaptive truncation method for differentially priv
 
 **The method utilizes adaptive truncation based on exploration-exploitation and Thomson sampling using Fisher information for step (4)**
 
-## Summary of (3)
-> **Title:** Differentially Private Distributed Bayesian Linear Regression with MCMC
-> 
+## Summary of Differentially Private Distributed Bayesian Linear Regression with MCMC
 > **Pre-print**: https://arxiv.org/abs/2301.13778
+>
+> **Code** : https://github.com/sinanyildirim/Bayesian_DP_dist_LR
 >
 > Keywords: Differential privacy, linear regression, distributed learning, MCMC
 
