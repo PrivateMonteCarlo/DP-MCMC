@@ -1,8 +1,5 @@
 # Statistic Selection and MCMC for Differentially Private Bayesian Estimation
 
-# Original github page for the project:
-https://github.com/barisalparslan1/statistic_selection_and_mcmc
-
 # Summary
 This github repository creates a github page for the work in the following arxiv link:
 https://arxiv.org/abs/2203.13377
